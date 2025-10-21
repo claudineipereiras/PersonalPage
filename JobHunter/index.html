@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Job Hunter</title>
+        <meta name="viewport">
       <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +13,23 @@
         
     </head>
     <body>
+      <!--New nav bar to implement new features menu and login-->
+   
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="archived.html">Archived</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Projects</a>
+            </li>
+          </ul>
+
         <!--the title of the app goes here-->
         <div class="container-sm my-5">
                 <div class="container text-center" style="height: 150px;">
@@ -42,17 +60,28 @@
                 <!--Form to add new job-->
                 <div class="container text-center my-3">
                     <form id="myForm">
-                        <div class="row align-items-center">
-                            <div class="col">
-                                <input type="text" class="form-control" id="link" placeholder="link" aria-label="Job ad link">
-                            </div>
-                            <div class="col-sm-1">
+                     <!-- appearantly it worked this way but needs investigation **changed oct 21**-->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                              <input type="text" class="form-control" id="link" placeholder="link" aria-label="Job ad link">
                               <button type="button" class="btn btn-secondary btn-danger btn-md" onclick="clearValue()">Cancel</button>
-                            </div>
-                            <div class="col-sm-1">
                               <button type="submit" class="btn btn-primary btn-md">Save</button>
                             </div>
-                        </div>
+
+                            <!-- testing button aligmnet **original**-->
+                             <!--
+                            <div class="row align-items-center">
+                                      <div class="col">
+                                          <input type="text" class="form-control" id="link" placeholder="link" aria-label="Job ad link">
+                                      </div>
+                                      <div class="col-sm-1">
+                                        <button type="button" class="btn btn-secondary btn-danger btn-md" onclick="clearValue()">Cancel</button>
+                                      </div>
+                                      <div class="col-sm-1">
+                                        <button type="submit" class="btn btn-primary btn-md">Save</button>
+                                      </div>
+                                      
+                             </div>
+                        --> 
                     </form>
                 </div>
                 <!--end of form new job-->
@@ -84,4 +113,9 @@
         </div>
      <script src="script.js"></script>
     </body>
+    <footer>
+      <div class="container text-center my-5">
+        <p>© 2025 Job Hunter. All rights reserved.</p>
+      </div>
+    </footer>
 </html>
