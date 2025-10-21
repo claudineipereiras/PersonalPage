@@ -27,6 +27,34 @@
                 <a class="nav-link disabled" aria-disabled="true">Projects</a>
                 </li>
             </ul>
+            <!-- a similar table will be included in this page-->
+             <!-- there will be one extra field "archived"-->
+              <div class="container mt-5">
+              <table class="table" id="dataTable">
+                <thead>
+                  <tr>
+                    <th class="w-10">Date</th>
+                    <th class="w-70">Link</th>
+                    <th class="w-10">Applied</th>
+                    <th class="w-10">Expired</th>
+                    <th class="w-10">Archived</th>
+                  </tr>
+                </thead>
+                <tbody id="dataBody">
+                 
+                </tbody>
+              </table>
+            </div>
+            <!--template for the table -->
+             <template id="jobrow">
+                <tr>
+                  <td class="record"></td>
+                  <td class="record"></td>
+                  <td class="record"> <input type="checkbox" class= "row-checkedbox" onchange="updateCheckedCount()"/></td>
+                  <td class="record"> <input type="checkbox" name="expired" id="expired" /></td>
+                  <td class="record"> <input type="checkbox" name="archived" id="archived" /></td>
+                </tr>
+              </template> 
     </body>
     <footer>
       <div class="container text-center my-5">
